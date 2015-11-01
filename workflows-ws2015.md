@@ -174,7 +174,7 @@ Possible problem: **Merge Conflicts**
 
 ---
 
-## Branching & Merging
+# Branching & Merging
 
 ---
 
