@@ -475,3 +475,228 @@ git push origin :testing
 # Assignment
 
 - Create a feature branch and be happy!
+
+—
+
+# Projects
+
+—
+
+# Projects
+
+* Lint
+* Editor
+* Tests
+* GIT
+* Dependencies
+* Executables/Scripts
+* Documentation
+* Sources
+* License
+
+—
+
+# Projects
+## Lint
+
+> Lint is a static code analysis tool used in software development for checking source code complies with coding rules
+— https://en.wikipedia.org/wiki/JSLint
+
+—
+
+# Projects
+## Lint
+
+```javascript
+semi: [2, ‚always’]
+```
+
+```javascript
+var x = 1 /*error Missing semicolon.*/
+```
+
+—
+
+# Projects
+## Lint
+
+> Conforming to a consistent style improves
+readability, and frees you to express yourself in ways that matter.
+— [Douglas Crockford](https://github.com/douglascrockford/JSLint)
+
+—
+
+# Project
+## Lint
+
+* [http://jslint.com/](http://jslint.com/)
+* [http://jshint.com/](http://jshint.com/)
+* [http://jscs.info/](http://jscs.info/)
+* [http://eslint.org/](http://eslint.org/)
+* [https://github.com/bbatsov/rubocop](https://github.com/bbatsov/rubocop)
+* …
+
+—
+
+# Projects
+## Editor
+
+* [WebStorm, RubyMine, PHPStorm, IntelliJ](https://www.jetbrains.com/idea/)
+* [Sublime](http://www.sublimetext.com/)
+* [TextMate](https://macromates.com/)
+* [Eclipse](http://www.eclipse.org/)
+* [Atom](https://atom.io/)
+* [vim](http://www.vim.org/)
+* …
+
+—
+
+# Projects
+## Editor
+
+> Each developer should use whatever makes them happy and productive.
+— [Ryan Anklam](http://blog.bittersweetryan.com/2012/02/great-ide-vs-text-editor-debate-why-i.html)
+
+—
+
+# Projects
+## Editor
+
+Configs for Teams & Editors
+* [EditorConfig](http://editorconfig.org/)
+* Available for several Editors
+	* WebStorm, RubyMine, IntelliJ
+	* Sublime
+	* …
+
+—
+
+# Projects
+## Editor
+
+```ini
+# top-most EditorConfig file
+root = true
+
+# Unix-style newlines with a newline ending every file
+[*]
+end_of_line = lf
+insert_final_newline = true
+
+# Set default charset
+[*.js]
+charset = utf-8
+```
+
+—
+
+# Projects
+## Editor
+
+> EditorConfig helps developers define and maintain consistent coding styles between different editors and IDEs. The EditorConfig project consists of a file format for defining coding styles and a collection of text editor plugins that enable editors to read the file format and adhere to defined styles.
+— [EditorConfig](http://editorconfig.org/)
+
+—
+
+# Projects
+## Tests
+
+> Test-driven development (TDD) is a software development process that relies on the repetition of a very short development cycle: first the developer writes an (initially failing) automated test case that defines a desired improvement or new function, then produces the minimum amount of code to pass that test, and finally refactors the new code to acceptable standards.
+- [Wikipedia – Test-driven development](https://en.wikipedia.org/wiki/Test-driven_development)
+
+—
+
+# Projects
+## Tests
+
+```bash
+npm test
+
+  lib
+    apis
+      ✓ should test includes() in ES5
+      - should test includes() in ES6
+    arrows
+      ✓ should show arrows behavior in ES5
+      - should show arrows behavior in ES6
+```
+
+—
+
+# Projects
+## Tests
+
+* Tests are mandatory for refactoring
+* Tests help you make your codebase more robust
+* … more from [Brigitte](http://brigitte-jellinek.at/)
+
+—
+
+# Projects
+## GIT
+
+You should think about your GIT configuration
+
+* Username and Email
+* Binary vs. Text
+
+—
+
+# Projects
+## GIT
+
+How to treat files? If you have big files, mark them as binary within the `.gitattributes` file and GIT will thank you for that.
+
+```bash
+# .gitattributes
+* text=auto
+```
+
+—
+
+# Projects
+## GIT
+
+```
+# .gitignore
+# system
+.DS_Sytem
+# IDE
+.idea/
+# deps
+node_modules/
+# build
+dist/
+```
+
+—
+
+# Projects
+## Dependencies
+
+* Use a package manager (apt-get, brew, npm, gem & bundler)
+* Read everything about [SemVer](http://semver.org/)
+
+—
+
+# Projects
+## Dependencies
+
+You can read
+
+**X.Y.Z**
+
+as
+
+**Major.Minor.Patch**
+
+or…
+
+—
+
+# Projects
+## Dependencies
+
+**X.Y.Z**
+
+**Breaking.Feature.Bug**
