@@ -700,3 +700,225 @@ or…
 **X.Y.Z**
 
 **Breaking.Feature.Bug**
+
+—
+
+# Generators
+
+—
+
+# Generators
+## Tasks
+
+* User settings
+* Copy files and directories (Templates)
+* Install dependencies
+* …
+
+—
+
+# Generators
+## [yeoman](http://yeoman.io/)
+
+**Install tool**
+
+```bash
+npm i -g yo
+```
+
+—
+
+# Generators
+## yeoman
+
+New generator: The directory name must start with *generator-*
+
+```bash
+# e.g. the 04-generator
+mkdir -p generator-04-generator
+```
+
+> This is important, as Yeoman relies on the file system to find available generators.
+— [Yeoman Documentation](http://yeoman.io/authoring/index.html)
+
+—
+
+# Generators
+## yeoman
+
+Every generator has at least one dependency:
+
+```bash
+npm i -S yeoman-generator
+```
+
+—
+
+# Generators
+## yeoman
+
+The *yeoman* generator has a *run loop*:
+
+```js
+module.exports = generators.Base.extend({
+	…
+})
+```
+
+> The run loop is a queue system with priority support.
+— [Yeoman Documentation](http://yeoman.io/authoring/running-context.html)
+
+—
+
+# Generators
+## yeoman
+
+Available priorities:
+
+- `initializing`
+- `prompting`
+- `configuring`
+- `default` → Custom Methods
+- `writing`
+- `conflicts`
+- `install`
+- `end`
+
+—
+
+# Generators
+## yeoman
+
+```javascript
+module.exports = generators.Base.extend({
+  helloWorld() {
+		this.log('Hello, World!‘)
+  }
+})
+```
+
+—
+
+# Generators
+## yeoman
+
+Async methods:
+
+```javascript
+module.exports = generators.Base.extend({
+  helloWorld() {
+		const done = this.async()
+		setTimeout(function() {
+			done()
+		}, 1000)
+  }
+})
+```
+
+—
+
+# Generators
+## yeoman
+
+**Debugging**
+
+```bash
+npm link
+```
+
+**ATTENTION:** `this.destinationRoot('tmp')`
+
+—
+
+# Generators
+## [Demo](https://github.com/multimediatechnology/assignment-workflows/tree/master/generator-04-generator)
+
+—
+
+# User Stories
+
+—
+
+# User Stories
+
+> A user story is a tool used in Agile software development to capture a description of a software feature from an end-user perspective. The user story describes the type of user, what they want and why. A user story helps to create a simplified description of a requirement.
+— http://searchsoftwarequality.techtarget.com/definition/user-story
+
+—
+
+# User Stories
+
+- A group of users has needs
+- Non-functional requirements (usage requirements, technical requirements)
+- Indicate the estimated size (not time)
+- Priority
+
+—
+
+# User Stories
+## How to
+
+- Card
+- Conversation
+- Confirmation
+
+—
+
+# User Stories
+## Card
+
+A physical token giving tangible and durable form to what would only be an abstraction[^user-story]
+
+![fit right](images/kanban-board.png)
+
+[^user-story]: https://en.wikipedia.org/wiki/User_story
+
+—
+
+# User Stories
+## Conversation
+
+Is taking place at different time and places during a project between the various stakeholders concerned by the given feature, which is largely verbal but most often supplemented by documentation[^user-story]
+
+![fit right](images/conversation.jpg)
+
+[^user-story]: https://en.wikipedia.org/wiki/User_story
+
+—
+
+# User Stories
+## Confirmation
+
+the more formal the better, ensures that the objectives the conversation revolved around have been reached finally[^user-story]
+
+![50% right](images/checkbox.png)
+
+[^user-story]: https://en.wikipedia.org/wiki/User_story
+
+—
+
+# User Stories
+## Template[^connextra]
+
+**As a <role>, I want <goal/desire> so that <benefit>**
+
+The *benefit* clause is optional
+
+**As a <role>, I want <goal/desire>**
+
+[^connextra]:[Connextra](http://agilecoach.typepad.com/photos/connextra_user_story_2001/connextrastorycard.html)
+
+—
+
+# User Stories
+## Examples
+
+1. Students can purchase monthly parking passes online.
+2. Parking passes can be paid via PayPal.
+3. Professors can input student marks.
+4. Students can enroll in seminars for which they have prerequisites.
+
+—
+
+# User Stories
+## Let’s try it
